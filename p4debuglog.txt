@@ -1,0 +1,175 @@
+gdb ./a.out 
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b input
+Breakpoint 1 at 0x772: file p2final.c, line 3.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, input () at p2final.c:3
+warning: Source file is more recent than executable.
+3   {
+(gdb) n
+5     printf("Enter your number\n");
+(gdb) n
+enter your number
+6     scanf("%d",&a);
+(gdb) n
+450
+7     return a;
+(gdb) n
+8   }
+(gdb) n
+main () at p2final.c:26
+26  b=input();
+(gdb) n
+
+Breakpoint 1, input () at p2final.c:3
+3   {
+(gdb) n
+5     printf("Enter your number\n");
+(gdb) n
+enter your number
+6     scanf("%d",&a);
+(gdb) n
+650
+7     return a;
+(gdb) 
+8   }
+(gdb) n
+main () at p2final.c:27
+27  c=input();
+(gdb) n
+
+Breakpoint 1, input () at p2final.c:3
+3   {
+(gdb) n
+5     printf("Enter your number\n");
+(gdb) n
+enter your number
+ gcc -g p3final.c
+ ./a.out
+Enter the value
+45
+Sum of n Numbers is 1035 
+ gdb ./a.out 
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b input
+Breakpoint 1 at 0x772: file p3final.c, line 3.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+ gcc -g p4final.c
+ ./a.out 
+Enter the value of n:
+5
+Enter elements 0 :
+12
+Enter elements 1 :
+25
+Enter elements 2 :
+36
+Enter elements 3 :
+45
+Enter elements 4 :
+32
+Sum is 150
+ gdb ./a.out 
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b input 
+Breakpoint 1 at 0x772: file p4final.c, line 3.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, input () at p4final.c:3
+3   {
+(gdb) n
+5     printf("Enter the value of n:\n");
+(gdb) n
+Enter the value of n:
+6     scanf("%d",&n);
+(gdb) n
+10 
+7     return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p4final.c:36
+36      aray(n,a);
+(gdb) n
+Enter elements 0 :
+78
+Enter elements 1 :
+78
+Enter elements 2 :
+65
+Enter elements 3 :
+25
+Enter elements 4 :
+154
+Enter elements 5 :
+658
+Enter elements 6 :
+258
+Enter elements 7 :
+154
+Enter elements 8 :
+325
+Enter elements 9 :
+451
+37      sum=add(n,a);
+(gdb) n
+38      output(sum);
+(gdb) n
+Sum is 2246
+39      return 0;
+(gdb) n
+40    }(gdb) p(n)
+$1 = 10
+(gdb) p(sum)
+$2 = 2246
+(gdb) q
